@@ -1,0 +1,54 @@
+team_name: "PARTICIPANT_001"
+
+primary_contact:
+  name: "Team Lead"
+  email: "team@example.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "Team Lead"
+    email: "team@example.com"
+    role: "ML Engineer / Team Lead"
+
+github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
+
+sandbox_link: "https://huggingface.co/spaces/YOUR_USERNAME/redrob-ranker"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./PARTICIPANT_001.csv"
+
+compute:
+  platform: "Local Linux / CPU"
+  cpu_cores: 4
+  ram_gb: 16
+  python_version: "3.12"
+  os: "Ubuntu 24.04"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Used Claude for architectural review and component design discussion.
+  All scoring logic, weights, and candidate evaluation heuristics were
+  engineered from first-principles analysis of the JD and signals doc.
+  No candidate data was fed to any LLM during ranking.
+
+methodology_summary: |
+  5-component weighted scoring: TF-IDF cosine skill match (35%), career
+  trajectory scoring (30%), non-linear experience curve targeting 5-9yr
+  sweet spot (15%), behavioral availability composite from 6 Redrob signals
+  (15%), education/extras (5%). Hard filters for pure IT-services backgrounds
+  and non-technical current titles prevent keyword stuffers from ranking.
+  Honeypot detection excludes 22 impossible profiles. All scoring runs on
+  pre-vectorized sparse matrices — 100K candidates in ~80s, CPU only,
+  no network calls.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
