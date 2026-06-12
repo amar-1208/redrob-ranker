@@ -1,14 +1,12 @@
 # Redrob Hackathon — Hybrid Candidate Ranking Engine
 
-**Team:** PARTICIPANT_001  
+**Team:** Neural Network 
 **Challenge:** Intelligent Candidate Discovery & Ranking  
 **Runtime:** ~81s for 100K candidates on CPU | **Status:** ✅ Passes `validate_submission.py`
 
 ---
 
 ## The Core Insight
-
-The Job Description for this role contains a warning: *"The right answer is not 'find candidates whose skills section contains the most AI keywords.'"* Most submissions will ignore this. Ours is built around it.
 
 Our engine is designed around one principle: **the gap between what a JD says and what it means**. A candidate whose profile says "RAG, Pinecone, LangChain" but whose title is "Marketing Manager" is not a fit. A candidate who "built a candidate-JD retrieval pipeline at a product company" without using those exact words is. We engineered both of these distinctions explicitly.
 
@@ -121,18 +119,10 @@ Every row in the submission includes a grounded, candidate-specific reasoning st
 
 ---
 
-## Winning Pitch
-
-> **The Hybrid Candidate Ranking Engine** treats the JD's own warnings as engineering requirements. Where keyword-match systems reward profile stuffers, ours rewards career evidence. Where availability is ignored, ours treats a 200-day-dormant candidate as what they are: not actually hirable. 
->
-> The result is a top-10 list populated entirely by India-based ML/AI engineers with 5-9 years of production experience at product companies — Paytm, Razorpay, Zomato, Apple, Yellow.ai, Sarvam AI — who are actively on the platform and reachable. No consultants. No dormant profiles. No keyword stuffers. Just the 10 candidates the JD was written for.
-
----
-
 ## Reproduce
 
 ```bash
-python rank.py --candidates ./candidates.jsonl --out ./PARTICIPANT_001.csv
+python rank.py --candidates ./candidates.jsonl --out ./PARTICIPANT_Neural_Network.csv
 ```
 
 **Runtime:** ~80s on CPU (16 GB RAM). No GPU. No network. No external APIs.
@@ -148,8 +138,8 @@ scikit-learn
 ## File Structure
 
 ```
-├── rank.py                   # Main ranker (single file, self-contained)
-├── PARTICIPANT_001.csv       # Submission (100 rows, validated)
-├── README.md                 # This file
-└── submission_metadata.yaml  # Hackathon metadata
+├── rank.py                              # Main ranker (single file, self-contained)
+├── PARTICIPANT_Neural_Network.csv       # Submission (100 rows, validated)
+├── README.md                            # This file
+└── submission_metadata.yaml             # Hackathon metadata
 ```
