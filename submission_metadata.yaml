@@ -1,14 +1,14 @@
-team_name: "PARTICIPANT_001"
+team_name: "Neural_Network"
 
 primary_contact:
-  name: "Team Lead"
-  email: "team@example.com"
-  phone: "+91-XXXXXXXXXX"
+  name: "Amarendra Andia"
+  email: "amarendraandia2007@gmail.com"
+  phone: "+91-7449981251"
 
 team_members:
-  - name: "Team Lead"
-    email: "team@example.com"
-    role: "ML Engineer / Team Lead"
+  - name: "Sanskriti Verma"
+    email: "sanskritiverma.1807@gmail.com"
+    role: "Research"
 
 github_repo: "https://github.com/YOUR_USERNAME/redrob-ranker"
 
